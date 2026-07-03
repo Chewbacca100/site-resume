@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kristina Portfolio</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h1>KP</h1>
+    <button onclick="showSection('home')">Главная</button>
+    <button onclick="showSection('courses')">Курсы</button>
+    <button onclick="showSection('projects')">Проекты</button>
+    <button onclick="showSection('practice')">Практика</button>
+    <button onclick="showSection('skills')">Навыки</button>
+    <button onclick="showSection('about')">Обо мне</button>
+</div>
+
+<div class="content">
+
+<section id="home" class="page active">
+    <div class="hero-container">
+
+        <div class="hero-image">
+            <img src="images/photo.png" alt="Фото Кристины">
+        </div>
+
+        <div class="hero-info">
+            <h2>Кристина Пименова</h2>
+
+            <p class="subtitle">
+                UX/UI Designer • Python • SQL
+            </p>
+
+            <p>
+                Создаю современные интерфейсы, веб-приложения
+                и системы автоматизации.
+            </p>
+
+            <div class="hero-buttons">
+                <button onclick="showSection('projects')">
+                    Проекты
+                </button>
+
+                <button onclick="showSection('courses')">
+                    Сертификат
+                </button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="courses" class="page">
+
+    <h2>Сертификат</h2>
+
+    <div class="certificate-card">
+
+        <img 
+            src="images/certificate.jpg" 
+            alt="Сертификат"
+            onclick="openCertificate('images/certificate.jpg')"
+        >
+
+        <div class="certificate-info">
+
+            <h3>Python — Stepik</h3>
+
+            <p>
+                Курс по Python, автоматизации и основам разработки.
+            </p>
+
+            <button onclick="openCertificate('images/certificate.jpg')">
+                Открыть сертификат
+            </button>
+
+        </div>
+
+    </div>
+<h2>Сертификат</h2>
+
+    <div class="certificate-card">
+
+        <img 
+            src="images/certificate1.png" 
+            alt="Сертификат"
+            onclick="openCertificate('images/certificate1.png')"
+        >
+
+        <div class="certificate-info">
+
+            <h3>Работа с LLM Giga Ghat</h3>
+
+            <p>
+                Курс по Сберу.
+            </p>
+
+            <button onclick="openCertificate('images/certificate1.png')">
+                Открыть сертификат
+            </button>
+
+        </div>
+
+    </div>
+<h2>Сертификат</h2>
+
+    <div class="certificate-card">
+
+        <img 
+            src="images/certificate2.png" 
+            alt="Сертификат"
+            onclick="openCertificate('images/certificate2.png')"
+        >
+
+        <div class="certificate-info">
+
+            <h3>Генеративное искусство</h3>
+
+            <p>
+                Курс по Сберу.
+            </p>
+
+            <button onclick="openCertificate('images/certificate2.png')">
+                Открыть сертификат
+            </button>
+
+        </div>
+
+    </div>
+<h2>Сертификат</h2>
+
+    <div class="certificate-card">
+
+        <img 
+            src="images/certificate3.png" 
+            alt="Сертификат"
+            onclick="openCertificate('images/certificate3.png')"
+        >
+
+        <div class="certificate-info">
+
+            <h3>Giga Ghat для государства и бизнеса </h3>
+
+            <p>
+                Курс по Сберу.
+            </p>
+
+            <button onclick="openCertificate('images/certificate3.png')">
+                Открыть сертификат
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- МОДАЛЬНОЕ ОКНО -->
+
+<<div class="certificate-modal" id="certificateModal">
+    <span class="close-modal" onclick="closeCertificate()">×</span>
+
+    <img id="modalCertificate" src="" alt="Сертификат">
+</div>
+
+<section id="projects" class="page">
+    <h2>Проекты</h2>
+
+    <div class="cards">
+        <div class="project">
+            <span>01</span>
+            <h3>Telegram Bot UI</h3>
+            <p>Разработка дизайна Telegram-бота.</p>
+        </div>
+
+        <div class="project">
+            <span>02</span>
+            <h3>SQL System</h3>
+            <p>База данных и система обработки информации.</p>
+        </div>
+
+        <div class="project">
+            <span>03</span>
+            <h3>Mobile App Concept</h3>
+            <p>Прототип мобильного приложения.</p>
+        </div>
+    </div>
+</section>
+
+<section id="practice" class="page">
+    <h2>Практика</h2>
+
+    <div class="glass practice-card">
+
+        <div class="practice-info">
+            <h3>Миграционный пункт №8</h3>
+
+            <p>
+                Работа с SQL, документацией и обработкой данных.
+            </p>
+
+            <ul>
+                <li>SQL-запросы</li>
+                <li>DBeaver</li>
+                <li>Работа с документацией</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <h2>Практика</h2>
+
+    <div class="glass practice-card">
+
+        <div class="practice-info">
+            <h3>ИП Алексеева А.Ю.</h3>
+
+            <p>
+                  Работа с сайтом и нейросетью
+
+            </p>
+
+            <ul>
+                <li>Разработка сайта для продажи одежды</li>
+                <li>Генерация с помощью нейросети</li>
+                <li>Работа с нейросетью</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section id="skills" class="page">
+    <h2>Навыки</h2>
+
+    <div class="skills-grid">
+        <div>Python</div>
+        <div>HTML/CSS</div>
+        <div>JavaScript</div>
+        <div>SQL</div>
+        <div>Git</div>
+        <div>Linux</div>
+        <div>Figma</div>
+        <div>VS Code</div>
+    </div>
+</section>
+
+<section id="about" class="page">
+    <h2>Обо мне</h2>
+
+    <div class="glass">
+        <p>
+            Студентка Люберецкого техникума имени Ю.А. Гагарина.
+            Интересуюсь UX/UI, frontend и автоматизацией.
+        </p>
+
+        <div class="links">
+            <a href="https://github.com/Chewbacca100">GitHub</a>
+            <a href="mailto:pimenovak199@gmail.com">Email</a>
+            <a href="https://t.me/Chewbacca_109">Telegram</a>
+        </div>
+    </div>
+</section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
